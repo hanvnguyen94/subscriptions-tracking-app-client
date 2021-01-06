@@ -1,17 +1,59 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>master of tracking</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Browser Template</h1>
-    </body>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <h1>Subscriptions Tracking App</h1>
+
+  <p id="message"></p>
+
+  <div class="unauthenticated">
+    <form id="sign-up">
+      <input type="email" name="credentials[email]" placeholder="Enter email here" required>
+      <input type="password" name="credentials[password]" placeholder="Enter password here" required>
+      <input type="password" name="credentials[password_confirmation]" placeholder="Confirm password" required>
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <form id="sign-in">
+      <input type="text" name="credentials[email]" placeholder="Enter email here" required>
+      <input type="password" name="credentials[password]" placeholder="Enter password here" required>
+      <button type="submit">Sign In</button>
+    </form>
+  </div>
+  <div class="authenticated">
+    <div class="navbar fixed-top navbar-dark bg-dark justify-content-end">
+      <!-- <a class="navbar-brand">Tic-Tac-Toe</a> -->
+      <form id="change-password" class="form-inline">
+        <input class="form-control mr-sm-2" type="password" name="passwords[old]" placeholder="Old Password" required>
+        <input class="form-control mr-sm-2" type="password" name="passwords[new]" placeholder="New Password" required>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Change Password</button>
+      </form>
+      <button id="sign-out" class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Out</button>
+    </div>
+
+    <form id="create-new-sub">
+      <input type="text" name=subscription[name] placeholder="Subscription's Name" required>
+      <input type="text" name="subscription[description]" placeholder="Brief Description" required>
+      <input type="text" name=subscription[start] placeholder="Start Date">
+      <input type="text" name=subscription[end] placeholder="End Date">
+      <!-- <input type="text" name=subscription[owner] placeholder="Owner"> -->
+      <button class="btn btn-success" type="submit">CREATE A NEW SUBSCRIPTION</button>
+      <h3 id="sub-display"></h3>
+    </form>
+
+  </div>
+</body>
+
 </html>
