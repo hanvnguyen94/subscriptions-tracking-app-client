@@ -65,6 +65,7 @@ form button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 1s ease;
 }
 
 .sub li {
@@ -88,3 +89,24 @@ form button:hover {
 .sub-item {
   padding: 0 0.5rem;
 }
+
+.fall {
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+/*CUSTOM SELECTOR */
+// select {
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+//   -ms-appearance: none;
+//   appearance: none;
+//   outline: 0;
+//   box-shadow: none;
+//   border: 0 !important;
+//   background-image: none;
+// }

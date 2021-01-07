@@ -14,22 +14,14 @@ const createSub = function (data) {
   })
 }
 
-const updateSub = function (cellIndex, currentValue) {
+const updateSub = function (data) {
   return $.ajax({
     url: config.apiUrl + '/subscriptions/' + store.subscription._id,
     method: 'PATCH',
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
-    data: {
-      subscription: {
-        cell: {
-          index: cellIndex,
-          // currentValue
-          value: currentValue
-        }
-      }
-    }
+    data: data
   })
 }
 
@@ -43,10 +35,13 @@ const showSub = function () {
   })
 }
 
-const deleteSub = function (data) {
+const deleteSub = function () {
   return $.ajax({
-    url: config.apiUrl + '/subscriptions/' + store.subscriptions._id,
-    method: 'DELETE'
+    url: config.apiUrl + '/subscriptions/' + store.subscription._id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
   })
 }
 

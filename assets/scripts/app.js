@@ -24,4 +24,5 @@ $(() => {
 
   // subscriptions process
   $('#create-new-sub').on('submit', subEvents.onCreateSub)
+  // $('.sub-list').on('click', subEvents.onDeleteSub)
 })

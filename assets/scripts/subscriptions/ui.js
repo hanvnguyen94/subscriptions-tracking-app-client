@@ -20,9 +20,24 @@ const createSubFailure = function (error) {
   $('#message').text('Subscription create failed ' + error.responseJSON.message)
 }
 
+const deleteSubSuccess = function () {
+  const subHTML = (`
+    <div>
+      <h4>Successfully Removed The Sub</h4>
+    </div>`)
+  $('#message').html(subHTML)
+  $('form').trigger('reset')
+}
+
+const deleteSubFailure = function (error) {
+  $('#message').html('There is an error occurs ', error)
+}
+
 module.exports = {
   createSubSuccess,
-  createSubFailure
+  createSubFailure,
+  deleteSubSuccess,
+  deleteSubFailure
   // playTurnSuccess,
   // playTurnFailed,
   // showGamesSuccess,
