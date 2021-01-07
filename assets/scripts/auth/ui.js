@@ -24,10 +24,14 @@ const signInSuccess = function (response) {
   $('#message').text(`Welcome Back, ${store.user.email}!`)
   $('.authenticated').show()
   $('.unauthenticated').hide()
-  $('.container').hide()
+
   // show the authenticated options
   $('#change-password').show()
   $('#sign-out').show()
+
+  const subHTML = '(<h3>List of your subscriptions:</h3>)'
+
+  $('#sub-display').html(subHTML)
 }
 
 const signInFailure = function (error) {

@@ -44,15 +44,24 @@
     </div>
 
     <form id="create-new-sub">
-      <input type="text" name=subscription[name] placeholder="Subscription's Name" required>
-      <input type="text" name="subscription[description]" placeholder="Brief Description" required>
-      <input type="text" name=subscription[start] placeholder="Start Date">
-      <input type="text" name=subscription[end] placeholder="End Date">
-      <!-- <input type="text" name=subscription[owner] placeholder="Owner"> -->
-      <button class="btn btn-success" type="submit">CREATE A NEW SUBSCRIPTION</button>
-      <h3 id="sub-display"></h3>
+      <input class="sub-input" type="text" name=subscription[name] placeholder="Subscription's Name" required>
+      <input class="sub-input" type="text" name="subscription[description]" placeholder="Brief Description" required>
+      <input class="sub-input" type="text" name=subscription[start] placeholder="Start Date">
+      <input class="sub-input" type="text" name=subscription[end] placeholder="End Date">
+      <input class="sub-input" type="text" name=subscription[owner] placeholder="Owner">
+      <button class="sub-button" type="submit">
+        <i class="fas fa-plus-square">Add New</i>
+      </button>
     </form>
-
+    <div class="sub-container">
+      <ul class="sub-list">
+        <!-- <div class="sub">
+          <li></li>
+          <button>delete</button>
+          <button>checked</button>
+        </div> -->
+      </ul>
+    </div>
   </div>
 </body>
 
