@@ -51,10 +51,31 @@
       <input class="sub-input" type="text" name=subscription[start] placeholder="Start Date">
       <input class="sub-input" type="text" name=subscription[end] placeholder="End Date">
       <input class="sub-input" type="text" name=subscription[owner] placeholder="Owner">
-      <button class="sub-button" type="submit">
-        <i class="fas fa-plus-square">Add New</i>
-      </button>
+      <button type="submit">Add New</button>
     </form>
+
+    <form id="update-sub">
+      <input class="sub-input" type="text" name=subscription[id] placeholder="Subscription's ID" required>
+      <input class="sub-input" type="text" name=subscription[name] placeholder="Subscription's Name" required>
+      <input class="sub-input" type="text" name="subscription[description]" placeholder="Brief Description" required>
+      <input class="sub-input" type="text" name=subscription[start] placeholder="Start Date">
+      <input class="sub-input" type="text" name=subscription[end] placeholder="End Date">
+      <input class="sub-input" type="text" name=subscription[owner] placeholder="Owner">
+      <button type="submit">Update</button>
+    </form>
+    <button id="show-subs" type="submit">SHOW TOTAL SUBS</button>
+
+    <form id="get-sub">
+      <input class="sub-input" type="text" name=subscription[id] placeholder="Subscription's ID" required>
+      <button type="submit">Get One Sub</button>
+    </form>
+
+    <form id="delete-sub">
+      <input class="sub-input" type="text" name=subscription[id] placeholder="Subscription's ID" required>
+      <button type="submit">Delete</button>
+    </form>
+    <div id="sub-display"></div>
+
     <div class="sub-container">
       <ul class="sub-list">
         <!-- <div class="sub">

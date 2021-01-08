@@ -14,40 +14,62 @@ const onCreateSub = function (event) {
   $('#sign-out').show()
 
   const form = event.target
-  const data = getFormFields(form)
+  const subData = getFormFields(form)
 
-  let ourHTML = `<li>${data.subscription.name} <button id="sub-delete">Delete</button></li>`
+  console.log('data is ', subData)
 
-  console.log('data is ', data)
+  const subArray = []
 
-  subList.insertAdjacentHTML('beforeend', ourHTML)
+  console.log('sub array is', subArray)
+
+  subArray.push(subData)
+
+  const subHTML = (`
+  <div>
+    <h4>Name: ${subData.subscription.name}</h4>
+    <p>Start Date: ${subData.subscription.start}</p>
+    <p>End Date: ${subData.subscription.end}</p>
+    <p>Owner: ${subData.subscription.owner}</p>
+  </div>`)
+
+  subList.insertAdjacentHTML('beforeend', subHTML)
   subInput.focus()
-  // sub DIV
-  // const subDiv = document.createElement('div')
-  // subDiv.classList.add('sub')
-  // // create li
-  // const newSub = document.createElement('li')
-  // newSub.innerText = data.subscription.name
-  // newSub.classList.add('sub-item')
-  // subDiv.appendChild(newSub)
-  //
-  // // check mark button
-  // const completeButton = document.createElement('button')
-  // completeButton.innerHTML = 'Complete'
-  // completeButton.classList.add('complete-btn')
-  // subDiv.appendChild(completeButton)
-  // // check trash button
-  // const trashButton = document.createElement('button')
-  // trashButton.innerHTML = 'Delete'
-  // trashButton.classList.add('trash-btn')
-  // subDiv.appendChild(trashButton)
-  //
-  // // append to list
-  // subList.appendChild(subDiv)
 
-  api.createSub(data)
+  api.createSub(subData)
     .then(ui.createSubSuccess)
     .catch(ui.createSubFailure)
+}
+
+// show index all subs
+
+const onShowSubs = function (event) {
+  event.preventDefault()
+  $('.sub-list').hide()
+  api.showSubs()
+    .then(ui.showSubsSuccess)
+    .catch(ui.showSubsFailure)
+}
+
+const onUpdateSub = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+  const updateData = getFormFields(form)
+
+  api.updateSub(updateData)
+    .then(ui.updateSubSuccess)
+    .catch(ui.updateSubFailure)
+}
+
+const onGetSub = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+  const subData = getFormFields(form)
+
+  api.getSub(subData)
+    .then(ui.getSubSuccess)
+    .catch(ui.getSubFailure)
 }
 
 const onDeleteSub = function (event) {
@@ -56,43 +78,16 @@ const onDeleteSub = function (event) {
   const form = event.target
 
   const subData = getFormFields(form)
-  // const item = event.target
-  // const subData = getFormFields(item)
-  // console.log(item)
-  // // delete item
-  // if(item.classList[0] === 'trash-btn') {
-  //   const sub = item.parentElement
-  //   // add animation
-  //   sub.classList.add('fall')
-  //   sub.addEventListener('transitionend', function () {
-  //     sub.remove()
-  //   })
-  alert('Deleted')
-
-  // if (item.classList[0] === 'complete-btn') {
-  //   const sub = item.parentElement
-  //   sub.classList.toggle('completed')
-  //   console.log(sub)
-  // }
 
   api.deleteSub(subData)
     .then(ui.deleteSubSuccess)
     .catch(ui.deleteSubFailure)
 }
 
-// const onCompleteSub = function (event) {
-//   event.preventDefault()
-//   const item = event.target
-//   const subData = getFormFields(item)
-//   console.log(item)
-//   // check mark item
-//
-// }
-
 module.exports = {
   onCreateSub,
+  onShowSubs,
+  onUpdateSub,
+  onGetSub,
   onDeleteSub
-  // onCompleteSub
-  // onPlayTurn,
-  // onShowGames
 }

@@ -29,7 +29,7 @@ const signInSuccess = function (response) {
   $('#change-password').show()
   $('#sign-out').show()
 
-  const subHTML = '(<h3>List of your subscriptions:</h3>)'
+  const subHTML = `<h3>List of your subscriptions:</h3>`
 
   $('#sub-display').html(subHTML)
 }

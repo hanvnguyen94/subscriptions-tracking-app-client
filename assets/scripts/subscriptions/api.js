@@ -16,16 +16,16 @@ const createSub = function (data) {
 
 const updateSub = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/subscriptions/' + store.subscription._id,
+    url: config.apiUrl + '/subscriptions/' + data.subscription.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
-    data: data
+    data
   })
 }
 
-const showSub = function () {
+const showSubs = function () {
   return $.ajax({
     url: config.apiUrl + '/subscriptions',
     method: 'GET',
@@ -35,9 +35,19 @@ const showSub = function () {
   })
 }
 
-const deleteSub = function () {
+const getSub = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/subscriptions/' + store.subscription._id,
+    url: config.apiUrl + '/subscriptions/' + data.subscription.id,
+    method: 'GET',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
+const deleteSub = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/subscriptions/' + data.subscription.id,
     method: 'DELETE',
     headers: {
       Authorization: 'Bearer ' + store.user.token
@@ -48,6 +58,7 @@ const deleteSub = function () {
 module.exports = {
   createSub,
   updateSub,
-  showSub,
+  showSubs,
+  getSub,
   deleteSub
 }
