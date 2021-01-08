@@ -28,10 +28,7 @@ const signInSuccess = function (response) {
   // show the authenticated options
   $('#change-password').show()
   $('#sign-out').show()
-
-  const subHTML = `<h3>List of your subscriptions:</h3>`
-
-  $('#sub-display').html(subHTML)
+  $('form').trigger('reset')
 }
 
 const signInFailure = function (error) {

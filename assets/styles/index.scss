@@ -1,10 +1,10 @@
 @import '~bootstrap/scss/bootstrap';
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); // @import "scss/fontawesome.scss";
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: box-sizing;
+  box-sizing: border-box;
 }
 
 body {
@@ -17,14 +17,13 @@ body {
 header {
   font-size: 1.5rem;
 }
-
-form,
-header {
-  // min-height: 20vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+// form,
+// header {
+//   // min-height: 20vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
 
 form button,
 form input {
@@ -32,6 +31,12 @@ form input {
   font-size: 1rem;
   border: none;
   background: white;
+  color: black;
+}
+
+.modal-title,
+form label {
+  color: black;
 }
 
 form button {
@@ -60,7 +65,7 @@ form button:hover {
 .sub {
   margin: 0.5rem;
   background: white;
-  color: black;
+  color: white;
   font-size: 1rem;
   display: flex;
   justify-content: space-between;

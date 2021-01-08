@@ -11,7 +11,8 @@ const onSignUp = function (event) {
   // use event.target as the form
   const form = event.target
   const data = getFormFields(form)
-
+  $('#signUpModal').modal('hide')
+  $('#modal-signUp').hide()
   api.signUp(data)
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
@@ -22,7 +23,9 @@ const onSignIn = function (event) {
 
   const form = event.target
   const data = getFormFields(form)
-
+  $('#signInModal').modal('hide')
+  $('#changePwModal').modal('hide')
+  $('.welcome').hide()
   api.signIn(data)
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)
@@ -33,7 +36,7 @@ const onChangePassword = function (event) {
 
   const form = event.target
   const data = getFormFields(form)
-
+  $('#changePwModal').modal('hide')
   api.changePassword(data)
     .then(ui.changePasswordSuccess)
     .catch(ui.changePasswordFailure)

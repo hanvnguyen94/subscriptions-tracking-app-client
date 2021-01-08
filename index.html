@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>master of tracking</title>
+  <title>tracking app</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Do not add `link` tags-->
@@ -15,34 +15,128 @@
 
 <body>
   <h1>Subscriptions Tracking App</h1>
+  <h4 class="welcome">NEW USER? CREATE NEW ACCOUNT WITH US</h4>
 
   <p id="message"></p>
 
   <div class="unauthenticated">
-    <form id="sign-up">
-      <input type="email" name="credentials[email]" placeholder="Enter email here" required>
-      <input type="password" name="credentials[password]" placeholder="Enter password here" required>
-      <input type="password" name="credentials[password_confirmation]" placeholder="Confirm password" required>
-      <button type="submit">Sign Up</button>
-    </form>
+    <!-- using modal -->
 
-    <form id="sign-in">
-      <input type="text" name="credentials[email]" placeholder="Enter email here" required>
-      <input type="password" name="credentials[password]" placeholder="Enter password here" required>
-      <button type="submit">Sign In</button>
-    </form>
+    <button id="modal-signUp" type="button" class="btn btn-primary" data-toggle="modal" data-target="#signUpModal" data-whatever="">GET STARTED</button>
+
+
+    <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="signUpModalLabel">Sign Up</h5>
+            <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="sign-up">
+              <div class="form-group">
+                <label for="email-signUp" class="col-form-label">Your Email:</label>
+                <input name="credentials[email]" type="text" class="form-control" id="email-signUp" placeholder="Enter email here" required>
+              </div>
+              <div class="form-group">
+                <label for="password-signUp" class="col-form-label">Your Password:</label>
+                <input name="credentials[password]" type="password" class="form-control" id="password-signUp" placeholder="Enter Password here" required>
+              </div>
+              <div class="form-group">
+                <label for="password_confirmation" class="col-form-label">Confirm Password:</label>
+                <input name="credentials[password_confirmation]" type="password" class="form-control" id="password_confirmation" placeholder="Confirm Password here" required>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- sign in -->
+    <div class="navbar fixed-top navbar-light bg-light justify-content-end">
+      <a class="navbar-brand" href="https://hanvnguyen94.github.io/subscriptions-tracking-app-client/">TRACKING APP</a>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signInModal" data-whatever="">LOG IN</button>
+      <button id="modal-signUp" type="button" class="btn btn-primary" data-toggle="modal" data-target="#signUpModal" data-whatever="">Create Account</button>
+    </div>
+    <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Log In</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="sign-in">
+              <div class="form-group">
+                <label for="email-signIn" class="col-form-label">Email:</label>
+                <input name="credentials[email]" type="text" class="form-control" id="email-signIn">
+              </div>
+              <div class="form-group">
+                <label for="password-signIn" class="col-form-label">Password:</label>
+                <input name="credentials[password]" type="password" class="form-control" id="password-signIn">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Log In</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
+  <!-- authenticated -->
   <div class="authenticated">
-    <div class="navbar fixed-top navbar-dark bg-dark justify-content-end">
-      <!-- <a class="navbar-brand">Tic-Tac-Toe</a> -->
-      <form id="change-password" class="form-inline">
+    <div class="navbar fixed-top navbar-light bg-light justify-content-end">
+      <a class="navbar-brand" href="#">TRACKING APP</a>
+      <button id="modal-changePw" type="button" class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#changePwModal" data-whatever="">Change Password</button>
+      <button id="sign-out" class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Out</button>
+    </div>
+    <div class="modal fade" id="changePwModal" tabindex="-1" role="dialog" aria-labelledby="changePwModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="changePwModal">Change Password</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="change-password">
+              <div class="form-group">
+                <label for="old-password" class="col-form-label">Old Password:</label>
+                <input name="passwords[old]" type="password" class="form-control" id="old-password">
+              </div>
+              <div class="form-group">
+                <label for="new-password" class="col-form-label">New Password:</label>
+                <input name="passwords[new]" type="password" class="form-control" id="new-password">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <form id="change-password" class="form-inline">
         <input class="form-control mr-sm-2" type="password" name="passwords[old]" placeholder="Old Password" required>
         <input class="form-control mr-sm-2" type="password" name="passwords[new]" placeholder="New Password" required>
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Change Password</button>
       </form>
-      <button id="sign-out" class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Out</button>
-    </div>
+       -->
+
 
 
     <form id="create-new-sub">
