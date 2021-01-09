@@ -26,10 +26,10 @@ const onCreateSub = function (event) {
 
   const subHTML = (`
   <div>
-    <h4>Name: ${subData.subscription.name}</h4>
+    <p>Website Address: ${subData.subscription.url}</p>
     <p>Start Date: ${subData.subscription.start}</p>
     <p>End Date: ${subData.subscription.end}</p>
-    <p>Owner: ${subData.subscription.owner}</p>
+
   </div>`)
 
   subList.insertAdjacentHTML('beforeend', subHTML)

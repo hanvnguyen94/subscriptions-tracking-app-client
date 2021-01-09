@@ -98,6 +98,13 @@
   <div class="authenticated">
     <div class="navbar fixed-top navbar-light bg-light justify-content-end">
       <a class="navbar-brand" href="#">TRACKING APP</a>
+      <!-- search box aka get one sub -->
+      <form class="form-inline" id="get-sub">
+        <input class="sub-input form-control mr-sm-2" type="search" name=subscription[id] placeholder="Search By ID" aria-label="Search" required>
+
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+
+      </form>
       <button id="modal-changePw" type="button" class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#changePwModal" data-whatever="">Change Password</button>
       <button id="sign-out" class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Out</button>
     </div>
@@ -130,39 +137,24 @@
       </div>
     </div>
 
-    <!-- <form id="change-password" class="form-inline">
-        <input class="form-control mr-sm-2" type="password" name="passwords[old]" placeholder="Old Password" required>
-        <input class="form-control mr-sm-2" type="password" name="passwords[new]" placeholder="New Password" required>
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Change Password</button>
-      </form>
-       -->
-
-
-
     <form id="create-new-sub">
-      <input class="sub-input" type="text" name=subscription[name] placeholder="Subscription's Name" required>
-      <input class="sub-input" type="text" name="subscription[description]" placeholder="Brief Description" required>
-      <input class="sub-input" type="text" name=subscription[start] placeholder="Start Date">
-      <input class="sub-input" type="text" name=subscription[end] placeholder="End Date">
+      <input class="sub-input" type="text" name="subscription[url]" placeholder="Website Address" required>
+      <input class="sub-input" type="text" name=subscription[start] placeholder="Start Date" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+      <input class="sub-input" type="text" name=subscription[end] placeholder="End Date" onfocus="(this.type='date')" onblur="(this.type='text')" required>
       <input class="sub-input" type="text" name=subscription[owner] placeholder="Owner">
       <button type="submit">Add New</button>
     </form>
 
     <form id="update-sub">
       <input class="sub-input" type="text" name=subscription[id] placeholder="Subscription's ID" required>
-      <input class="sub-input" type="text" name=subscription[name] placeholder="Subscription's Name" required>
-      <input class="sub-input" type="text" name="subscription[description]" placeholder="Brief Description" required>
-      <input class="sub-input" type="text" name=subscription[start] placeholder="Start Date">
-      <input class="sub-input" type="text" name=subscription[end] placeholder="End Date">
-      <input class="sub-input" type="text" name=subscription[owner] placeholder="Owner">
+      <input class="sub-input" type="text" name=subscription[url] placeholder="Website Address" required>
+      <input class="sub-input" type="text" name=subscription[start] placeholder="Start Date" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+      <input class="sub-input" type="text" name=subscription[end] placeholder="End Date" onfocus="(this.type='date')" onblur="(this.type='text')" required>
       <button type="submit">Update</button>
     </form>
     <button id="show-subs" type="submit">SHOW TOTAL SUBS</button>
 
-    <form id="get-sub">
-      <input class="sub-input" type="text" name=subscription[id] placeholder="Subscription's ID" required>
-      <button type="submit">Get One Sub</button>
-    </form>
+
 
     <form id="delete-sub">
       <input class="sub-input" type="text" name=subscription[id] placeholder="Subscription's ID" required>
