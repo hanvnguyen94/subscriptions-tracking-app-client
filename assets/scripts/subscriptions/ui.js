@@ -18,35 +18,40 @@ const createSubSuccess = function (response) {
   $('#message').text('New Subscription Created')
   $('.sub-list').show()
   $('#sub-display').hide()
+  $('.sub-container').show()
   //  'store' the subscription
   let newSub = response.subscription
   store.subscription = newSub
   console.log('new sub data ', newSub)
   // trying new thing to display
-  const subDiv = document.createElement('div')
-  subDiv.classList.add('sub')
-  // create list
-  newSub = document.createElement('li')
-  newSub.innerHTML = store.subscription.url
-  // save
-  newSub.classList.add('sub-item')
-  subDiv.appendChild(newSub)
-  // subList.appendChild(newSub)
+  const subsList = []
+  subsList.push(newSub)
+  subsList.forEach(singleSub => {
+    const subDiv = document.createElement('div')
+    subDiv.classList.add('sub')
+    // create list
+    newSub = document.createElement('li')
+    newSub.innerHTML = store.subscription.url
+    // save
+    newSub.classList.add('sub-item')
+    subDiv.appendChild(newSub)
+    // subList.appendChild(newSub)
 
-  // create buttons
-  // const editButton = document.createElement('button')
-  // editButton.innerHTML = (editButton)
+    // create buttons
+    // const editButton = document.createElement('button')
+    // editButton.innerHTML = (editButton)
 
-  // adding class for styling
-  editButton.classList.add('edit-btn')
-  subDiv.appendChild(editButton)
-  // Create trash button
-  // const trashButton = document.createElement('button')
-  // trashButton.innerHTML = 'Delete'
-  trashButton.classList.add('trash-btn')
-  subDiv.appendChild(trashButton)
-  // attach sub
-  subList.appendChild(subDiv)
+    // adding class for styling
+    editButton.classList.add('edit-btn')
+    subDiv.appendChild(editButton)
+    // Create trash button
+    // const trashButton = document.createElement('button')
+    // trashButton.innerHTML = 'Delete'
+    trashButton.classList.add('trash-btn')
+    subDiv.appendChild(trashButton)
+    // attach sub
+    subList.appendChild(subDiv)
+  })
   // reset all forms
   $('form').trigger('reset')
 }
@@ -63,6 +68,8 @@ const showSubsSuccess = function (response) {
   const mySubs = subs.filter(mySubs => mySubs.owner === owned)
   // console.log('my obj subs ', mySubs)
   $('#sub-display').show()
+  $('.sub-container').hide()
+
   let allSubsHTML = ''
 
   mySubs.forEach(singleSub => {
@@ -77,7 +84,8 @@ const showSubsSuccess = function (response) {
     allSubsHTML += singleSubHTML
   })
   $('#sub-display').html(allSubsHTML)
-  $('.sub-list').hide()
+  // $('.sub-list').hide()
+
   $('form').trigger('reset')
 }
 
