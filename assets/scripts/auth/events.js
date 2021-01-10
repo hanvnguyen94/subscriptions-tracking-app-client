@@ -26,6 +26,8 @@ const onSignIn = function (event) {
   $('#signInModal').modal('hide')
   $('#changePwModal').modal('hide')
   $('.welcome').hide()
+  $('.authenticated').show()
+  $('#modal-deleteSub').show()
   api.signIn(data)
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)

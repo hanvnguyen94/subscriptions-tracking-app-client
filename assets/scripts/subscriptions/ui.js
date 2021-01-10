@@ -17,7 +17,7 @@ const createSubSuccess = function (response) {
   $('.navbar').show()
   $('#message').text('New Subscription Created')
   $('.sub-list').show()
-  $('#sub-display').hide()
+  // $('#sub-display').hide()
   $('.sub-container').show()
   //  'store' the subscription
   let newSub = response.subscription
@@ -74,7 +74,7 @@ const showSubsSuccess = function (response) {
 
   mySubs.forEach(singleSub => {
     const singleSubHTML = (`
-      <div>
+      <div id="demo">
         <p>Website Address: ${singleSub.url}</p>
         <p>Start Date: ${singleSub.start}</p>
         <p>End Date: ${singleSub.end}</p>
@@ -87,6 +87,10 @@ const showSubsSuccess = function (response) {
   // $('.sub-list').hide()
 
   $('form').trigger('reset')
+}
+
+const tempDelete = function () {
+  console.log('hey there')
 }
 
 const showSubsFailure = function (error) {
@@ -150,5 +154,6 @@ module.exports = {
   getSubSuccess,
   getSubFailure,
   deleteSubSuccess,
-  deleteSubFailure
+  deleteSubFailure,
+  tempDelete
 }
