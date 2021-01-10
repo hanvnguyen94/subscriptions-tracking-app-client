@@ -12,6 +12,7 @@ const onCreateSub = function (event) {
   const subData = getFormFields(form)
 
   console.log('data is ', subData)
+  $('#addNewModal').modal('hide')
 
   api.createSub(subData)
     .then(ui.createSubSuccess)
@@ -33,6 +34,7 @@ const onUpdateSub = function (event) {
 
   const form = event.target
   const updateData = getFormFields(form)
+  $('#editSubModal').modal('hide')
   api.updateSub(updateData)
     .then(ui.updateSubSuccess)
     .catch(ui.updateSubFailure)

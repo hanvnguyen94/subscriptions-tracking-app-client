@@ -77,7 +77,7 @@ form button:hover {
   flex: 1;
 }
 
-.complete-btn,
+.edit-btn,
 .trash-btn {
   background: #ff6f47;
   color: white;
@@ -87,12 +87,13 @@ form button:hover {
   font-size: 1rem;
 }
 
-.complete-btn {
+.edit-btn {
   background: rgb(73,204,73);
 }
 
 .sub-item {
   padding: 0 0.5rem;
+  color: black;
 }
 
 .fall {
@@ -131,7 +132,11 @@ form button:hover {
 }
 
 .authenticated {
-  padding-top: 50px;
+  padding-top: 30px;
+}
+
+#message {
+  padding-top: 70px;
 }
 /*CUSTOM SELECTOR */
 // select {

@@ -25,7 +25,7 @@ const signUpFailure = function (error) {
 const signInSuccess = function (response) {
   // save user information to use later on
   store.user = response.user
-  $('#user-message').text(`Welcome Back, ${store.user.email}!`)
+  $('#message').text(`Welcome Back, ${store.user.email}!`)
   $('.authenticated').show()
   $('.unauthenticated').hide()
 
@@ -33,6 +33,7 @@ const signInSuccess = function (response) {
   $('#change-password').show()
   $('#sign-out').show()
   $('.app-name').hide()
+  $('#sub-display').hide()
   $('form').trigger('reset')
 }
 
