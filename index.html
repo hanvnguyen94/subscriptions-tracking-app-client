@@ -119,7 +119,7 @@
       <a class="navbar-brand" href="#">TRACKING APP</a>
       <!-- search box aka get one sub -->
       <form class="form-inline" id="get-sub">
-        <input class="sub-input form-control mr-sm-2" type="search" name=subscription[url] placeholder="Search By URL" aria-label="Search" required>
+        <input class="sub-input form-control mr-sm-2" type="search" name=subscription[id] placeholder="Search By ID" aria-label="Search" required>
 
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 
@@ -214,13 +214,13 @@
           <div class="modal-body">
             <form id="update-sub">
               <div class="form-group">
-                <label for="edit-sub-url" class="col-form-label">Subscription URL:</label>
-                <input name="subscription[url]" type="text" class="form-control" id="edit-sub-url">
+                <label for="edit-sub-id" class="col-form-label">Subscription ID:</label>
+                <input name="subscription[id]" type="text" class="form-control" id="edit-sub-id">
               </div>
-              <!-- <div class="form-group">
+              <div class="form-group">
                 <label for="edit-sub-url" class="col-form-label">Website Address:</label>
                 <input name="subscription[url]" type="text" class="form-control" id="edit-sub-url">
-              </div> -->
+              </div>
               <div class="form-group">
                 <label for="edit-sub-start" class="col-form-label">Start Date:</label>
                 <input name="subscription[start]" type="text" class="form-control" id="edit-sub-start" onfocus="(this.type='date')" onblur="(this.type='text')" required>>
@@ -264,8 +264,8 @@
           <div class="modal-body">
             <form id="delete-sub">
               <div class="form-group">
-                <label for="delete-sub-id" class="col-form-label">Subscription URL:</label>
-                <input name="subscription[url]" type="text" class="form-control" id="delete-sub-id">
+                <label for="delete-sub-id" class="col-form-label">Subscription ID:</label>
+                <input name="subscription[id]" type="text" class="form-control" id="delete-sub-id">
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
