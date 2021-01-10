@@ -58,6 +58,7 @@ const onDeleteSub = function (event) {
 
   const subData = getFormFields(form)
 
+  $('#deleteSubModal').modal('hide')
   api.deleteSub(subData)
     .then(ui.deleteSubSuccess)
     .catch(ui.deleteSubFailure)

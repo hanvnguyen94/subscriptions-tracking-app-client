@@ -249,12 +249,37 @@
 
     <button id="show-subs" class="btn btn-outline-success my-2 my-sm-0" type="submit">SHOW TOTAL SUBS</button>
 
+    <!-- making delete modal -->
 
-
-    <form id="delete-sub">
+    <button id="modal-deleteSub" type="button" class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#deleteSubModal" data-whatever="">Delete</button>
+    <div class="modal fade" id="deleteSubModal" tabindex="-1" role="dialog" aria-labelledby="deleteSubModal" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editSubModal">Delete</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="delete-sub">
+              <div class="form-group">
+                <label for="delete-sub-id" class="col-form-label">Subscription ID:</label>
+                <input name="subscription[id]" type="text" class="form-control" id="delete-sub-id">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <form id="delete-sub">
       <input class="sub-input" type="text" name=subscription[id] placeholder="Subscription's ID" required>
       <button type="submit">Delete</button>
-    </form>
+    </form> -->
 
     <div id="sub-display"></div>
 

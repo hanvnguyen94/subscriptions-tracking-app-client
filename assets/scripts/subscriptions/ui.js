@@ -8,6 +8,7 @@ const subButton = document.querySelector('.sub-button')
 const subList = document.querySelector('.sub-list')
 
 const editButton = document.getElementById('modal-editSub')
+const trashButton = document.getElementById('modal-deleteSub')
 
 const createSubSuccess = function (response) {
   $('.unauthenticated').hide()
@@ -40,8 +41,8 @@ const createSubSuccess = function (response) {
   editButton.classList.add('edit-btn')
   subDiv.appendChild(editButton)
   // Create trash button
-  const trashButton = document.createElement('button')
-  trashButton.innerHTML = 'Delete'
+  // const trashButton = document.createElement('button')
+  // trashButton.innerHTML = 'Delete'
   trashButton.classList.add('trash-btn')
   subDiv.appendChild(trashButton)
   // attach sub

@@ -34,6 +34,8 @@ const signInSuccess = function (response) {
   $('#sign-out').show()
   $('.app-name').hide()
   $('#sub-display').hide()
+  $('sub-container').hide()
+
   $('form').trigger('reset')
 }
 
