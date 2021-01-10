@@ -104,6 +104,35 @@ form button:hover {
   text-decoration: line-through;
   opacity: 0.5;
 }
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-top: 50px;
+}
+
+.flex-child {
+  flex: 1;
+  // border: 2px solid black;
+  text-align: center;
+}
+
+.flex-child:first-child {
+  margin-right: 20px;
+  // border: 2px solid green;
+  border-right: 2px solid white;
+}
+
+.app-name {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.authenticated {
+  padding-top: 50px;
+}
 /*CUSTOM SELECTOR */
 // select {
 //   -webkit-appearance: none;

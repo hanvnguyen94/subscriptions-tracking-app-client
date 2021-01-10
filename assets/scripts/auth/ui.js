@@ -15,19 +15,24 @@ const signUpSuccess = function (response) {
 // will pass this function an error object
 const signUpFailure = function (error) {
   $('#message').text('Failed To Sign Up ', error)
+  $('.unauthenticated').show()
+  $('.container').show()
+  $('.app-name').show()
+  $('.welcome').show()
   $('form').trigger('reset')
 }
 
 const signInSuccess = function (response) {
   // save user information to use later on
   store.user = response.user
-  $('#message').text(`Welcome Back, ${store.user.email}!`)
+  $('#user-message').text(`Welcome Back, ${store.user.email}!`)
   $('.authenticated').show()
   $('.unauthenticated').hide()
 
   // show the authenticated options
   $('#change-password').show()
   $('#sign-out').show()
+  $('.app-name').hide()
   $('form').trigger('reset')
 }
 
@@ -47,12 +52,13 @@ const changePasswordFailure = function (error) {
 }
 
 const signOutSuccess = function () {
-  $('#message').text('Sign In To See Your Subscriptions!')
-
   $('.authenticated').hide()
   $('.unauthenticated').show()
   // VERY IMPORTANT => unstore the user information
   store.user = null
+  $('#message').text('Successfully Sign Out')
+  $('.app-name').show()
+  $('.welcome').show()
   $('form').trigger('reset')
 }
 

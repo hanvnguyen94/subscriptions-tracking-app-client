@@ -2,17 +2,37 @@
 
 const store = require('./../store')
 
+// select DOM
+const subInput = document.querySelector('.sub-input')
+const subButton = document.querySelector('.sub-button')
+const subList = document.querySelector('.sub-list')
+
 const createSubSuccess = function (response) {
   $('.unauthenticated').hide()
   // show the authenticated options
   $('.authenticated').show()
   $('.navbar').show()
+  $('#message').show()
   $('#message').text('New Subscription Created')
 
   //  'store' the subscription
   const newSub = response.subscription
   store.subscription = newSub
 
+  // const subArray = []
+  // subArray.push(newSub)
+  // console.log('sub array is', subArray)
+  //
+  // const subHTML = (`
+  // <div>
+  //   <p>Website Address: ${newSub.subscription.url}</p>
+  //   <p>Start Date: ${newSub.subscription.start}</p>
+  //   <p>End Date: ${newSub.subscription.end}</p>
+  //
+  // </div>`)
+  //
+  // subList.insertAdjacentHTML('beforeend', subHTML)
+  // subInput.focus()
   // const ourHTML = `<li>${newSub.subscription.name}</li>`
   // reset all forms
   $('form').trigger('reset')
@@ -32,7 +52,7 @@ const showSubsSuccess = function (response) {
   console.log(mySubs)
 
   const subsString = JSON.stringify(mySubs)
-  $('#message').text(subsString)
+  $('#message').text(mySubs)
   $('form').trigger('reset')
   // let subsHTML = ''
   //
@@ -48,7 +68,7 @@ const showSubsSuccess = function (response) {
   //   subsHTML += currentSubHTML
   // })
   //
-  // $('#sub-display').html(subsHTML)
+  $('#sub-display').html(subsString)
 
   // $('#message').text(`${store.user.email} has ${subs.length} items`)
 }
@@ -72,14 +92,13 @@ const getSubSuccess = function (response) {
   console.log(response)
   const sub = response.subscription
 
-  console.log('sub is ', sub)
+  // console.log('sub is ', sub)
 
   const subHTML = (`
     <div>
-      <h4>Name: ${sub.name}</h4>
+      <p>Website Address: ${sub.url}</p>
       <p>Start Date: ${sub.start}</p>
       <p>End Date: ${sub.end}</p>
-      <p>Owner: ${sub.owner}</p>
     </div>`)
 
   $('#sub-display').html(subHTML)

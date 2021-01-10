@@ -4,11 +4,6 @@ const api = require('./api')
 const ui = require('./ui')
 const getFormFields = require('./../../../lib/get-form-fields')
 
-// select DOM
-const subInput = document.querySelector('.sub-input')
-const subButton = document.querySelector('.sub-button')
-const subList = document.querySelector('.sub-list')
-
 const onCreateSub = function (event) {
   event.preventDefault()
   $('#sign-out').show()
@@ -17,23 +12,6 @@ const onCreateSub = function (event) {
   const subData = getFormFields(form)
 
   console.log('data is ', subData)
-
-  const subArray = []
-
-  console.log('sub array is', subArray)
-
-  subArray.push(subData)
-
-  const subHTML = (`
-  <div>
-    <p>Website Address: ${subData.subscription.url}</p>
-    <p>Start Date: ${subData.subscription.start}</p>
-    <p>End Date: ${subData.subscription.end}</p>
-
-  </div>`)
-
-  subList.insertAdjacentHTML('beforeend', subHTML)
-  subInput.focus()
 
   api.createSub(subData)
     .then(ui.createSubSuccess)
@@ -44,7 +22,7 @@ const onCreateSub = function (event) {
 
 const onShowSubs = function (event) {
   event.preventDefault()
-  $('.sub-list').hide()
+  // $('.sub-list').hide()
   api.showSubs()
     .then(ui.showSubsSuccess)
     .catch(ui.showSubsFailure)
@@ -55,7 +33,6 @@ const onUpdateSub = function (event) {
 
   const form = event.target
   const updateData = getFormFields(form)
-
   api.updateSub(updateData)
     .then(ui.updateSubSuccess)
     .catch(ui.updateSubFailure)
@@ -66,7 +43,7 @@ const onGetSub = function (event) {
 
   const form = event.target
   const subData = getFormFields(form)
-
+  console.log('you have a problem here? ', subData)
   api.getSub(subData)
     .then(ui.getSubSuccess)
     .catch(ui.getSubFailure)
