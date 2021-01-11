@@ -41,6 +41,9 @@ const signInSuccess = function (response) {
 
 const signInFailure = function (error) {
   $('#message').text(error.responseJSON.message)
+  $('.authenticated').hide()
+  $('.app-name').show()
+  $('.welcome').show()
   $('form').trigger('reset')
 }
 

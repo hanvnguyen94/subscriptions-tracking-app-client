@@ -29,42 +29,42 @@
       <!-- sign up -->
       <div class="flex-container">
         <div class="signUp-div left-third flex-child">
-          <h3 class="welcome">NEW USER?
-          </h3>
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signUpModal" data-whatever="">GET STARTED</button>
+          <h4 class="welcome">New User? Let's Create An Account
+            </h3>
+            <button type="button" data-toggle="modal" data-target="#signUpModal" data-whatever="">GET STARTED</button>
 
-          <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="signUpModalLabel">Sign Up</h5>
-                  <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <form id="sign-up">
-                    <div class="form-group">
-                      <label for="email-signUp" class="col-form-label">Your Email:</label>
-                      <input name="credentials[email]" type="text" class="form-control" id="email-signUp" placeholder="Enter email here" required>
-                    </div>
-                    <div class="form-group">
-                      <label for="password-signUp" class="col-form-label">Your Password:</label>
-                      <input name="credentials[password]" type="password" class="form-control" id="password-signUp" placeholder="Enter Password here" required>
-                    </div>
-                    <div class="form-group">
-                      <label for="password_confirmation" class="col-form-label">Confirm Password:</label>
-                      <input name="credentials[password_confirmation]" type="password" class="form-control" id="password_confirmation" placeholder="Confirm Password here" required>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="submit" class="btn btn-primary">Sign Up</button>
-                    </div>
-                  </form>
+            <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="signUpModalLabel">Sign Up</h5>
+                    <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="sign-up">
+                      <div class="form-group">
+                        <label for="email-signUp" class="col-form-label">Your Email:</label>
+                        <input name="credentials[email]" type="text" class="form-control" id="email-signUp" placeholder="Enter email" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="password-signUp" class="col-form-label">Your Password:</label>
+                        <input name="credentials[password]" type="password" class="form-control" id="password-signUp" placeholder="Enter Password" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="password_confirmation" class="col-form-label">Confirm Password:</label>
+                        <input name="credentials[password_confirmation]" type="password" class="form-control" id="password_confirmation" placeholder="Confirm Password" required>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" data-dismiss="modal">Close</button>
+                        <button type="submit">Sign Up</button>
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
         </div>
 
         <!-- sign in -->
@@ -74,9 +74,9 @@
         <button id="modal-signUp" type="button" class="btn btn-primary" data-toggle="modal" data-target="#signUpModal" data-whatever="">Create Account</button>
       </div> -->
         <div class="signIn-div right-third flex-child">
-          <h3 class="welcome">ALREADY A USER?
-          </h3>
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signInModal" data-whatever="">LOG IN</button>
+          <h4 class="welcome">Already Have An Account?
+          </h4>
+          <button type="button" data-toggle="modal" data-target="#signInModal" data-whatever="">LOG IN</button>
 
           <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -91,15 +91,15 @@
                   <form id="sign-in">
                     <div class="form-group">
                       <label for="email-signIn" class="col-form-label">Email:</label>
-                      <input name="credentials[email]" type="text" class="form-control" id="email-signIn">
+                      <input placeholder="Enter Email" name="credentials[email]" type="text" class="form-control" id="email-signIn">
                     </div>
                     <div class="form-group">
                       <label for="password-signIn" class="col-form-label">Password:</label>
-                      <input name="credentials[password]" type="password" class="form-control" id="password-signIn">
+                      <input placeholder="Enter Password" name="credentials[password]" type="password" class="form-control" id="password-signIn">
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="submit" class="btn btn-primary">Log In</button>
+                      <button type="button" data-dismiss="modal">Close</button>
+                      <button type="submit">Log In</button>
                     </div>
                   </form>
                 </div>
@@ -121,11 +121,11 @@
       <form class="form-inline" id="get-sub">
         <input class="sub-input form-control mr-sm-2" type="search" name=subscription[id] placeholder="Search By ID" aria-label="Search" required>
 
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <button type="submit">Search</button>
 
       </form>
-      <button id="modal-changePw" type="button" class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#changePwModal" data-whatever="">Change Password</button>
-      <button id="sign-out" class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Out</button>
+      <button id="modal-changePw" type="button" class="change-pw" data-toggle="modal" data-target="#changePwModal" data-whatever="">Change Password</button>
+      <button id="sign-out" type="submit">Sign Out</button>
     </div>
     <div class="modal fade" id="changePwModal" tabindex="-1" role="dialog" aria-labelledby="changePwModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -147,8 +147,8 @@
                 <input name="passwords[new]" type="password" class="form-control" id="new-password">
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" data-dismiss="modal">Close</button>
+                <button type="submit">Submit</button>
               </div>
             </form>
           </div>
@@ -156,8 +156,12 @@
       </div>
     </div>
 
+    <!-- show index button -->
+
+    <button id="show-subs" type="submit">SHOW TOTAL SUBS</button>
+
     <!-- making add new modal -->
-    <button id="modal-addNew" type="button" class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#addNewModal" data-whatever="">Add New</button>
+    <button id="modal-addNew" type="button" data-toggle="modal" data-target="#addNewModal" data-whatever="">Add New</button>
     <div class="modal fade" id="addNewModal" tabindex="-1" role="dialog" aria-labelledby="addNewModal" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -182,8 +186,8 @@
                 <input name="subscription[end]" type="text" class="form-control" id="add-new-end" onfocus="(this.type='date')" onblur="(this.type='text')" required>>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" data-dismiss="modal">Close</button>
+                <button type="submit">Submit</button>
               </div>
             </form>
           </div>
@@ -191,17 +195,9 @@
       </div>
     </div>
 
-    <!-- <form id="create-new-sub">
-      <input class="sub-input" type="text" name="subscription[url]" placeholder="Website Address" required>
-      <input class="sub-input" type="text" name=subscription[start] placeholder="Start Date" onfocus="(this.type='date')" onblur="(this.type='text')" required>
-      <input class="sub-input" type="text" name=subscription[end] placeholder="End Date" onfocus="(this.type='date')" onblur="(this.type='text')" required>
-      <input class="sub-input" type="text" name=subscription[owner] placeholder="Owner">
-      <button type="submit">Add New</button>
-    </form> -->
-
     <!-- making update modal -->
 
-    <button id="modal-editSub" type="button" class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#editSubModal" data-whatever="">Edit</button>
+    <button id="modal-editSub" type="button" data-toggle="modal" data-target="#editSubModal" data-whatever="">Edit</button>
     <div class="modal fade" id="editSubModal" tabindex="-1" role="dialog" aria-labelledby="editSubModal" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -230,8 +226,8 @@
                 <input name="subscription[end]" type="text" class="form-control" id="edit-sub-end" onfocus="(this.type='date')" onblur="(this.type='text')" required>>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" data-dismiss="modal">Close</button>
+                <button type="submit">Submit</button>
               </div>
             </form>
           </div>
@@ -239,19 +235,9 @@
       </div>
     </div>
 
-    <!-- <form id="update-sub">
-      <input class="sub-input" type="text" name=subscription[id] placeholder="Subscription's ID" required>
-      <input class="sub-input" type="text" name=subscription[url] placeholder="Website Address" required>
-      <input class="sub-input" type="text" name=subscription[start] placeholder="Start Date" onfocus="(this.type='date')" onblur="(this.type='text')" required>
-      <input class="sub-input" type="text" name=subscription[end] placeholder="End Date" onfocus="(this.type='date')" onblur="(this.type='text')" required>
-      <button type="submit">Update</button>
-    </form> -->
-
-    <button id="show-subs" class="btn btn-outline-success my-2 my-sm-0" type="submit">SHOW TOTAL SUBS</button>
-
     <!-- making delete modal -->
 
-    <button id="modal-deleteSub" type="button" class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#deleteSubModal" data-whatever="">Delete</button>
+    <button id="modal-deleteSub" type="button" data-toggle="modal" data-target="#deleteSubModal" data-whatever="">Delete</button>
     <div class="modal fade" id="deleteSubModal" tabindex="-1" role="dialog" aria-labelledby="deleteSubModal" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -268,8 +254,8 @@
                 <input name="subscription[id]" type="text" class="form-control" id="delete-sub-id">
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" data-dismiss="modal">Close</button>
+                <button type="submit">Submit</button>
               </div>
             </form>
           </div>

@@ -3,15 +3,14 @@
 const api = require('./api')
 const ui = require('./ui')
 const getFormFields = require('./../../../lib/get-form-fields')
-const store = require('./../store')
 
 // Select DOM
-const subInput = document.querySelector('.sub-input')
-const subButton = document.querySelector('.sub-button')
-const subList = document.querySelector('.sub-list')
-
-const editButton = document.getElementById('modal-editSub')
-const trashButton = document.getElementById('modal-deleteSub')
+// const subInput = document.querySelector('.sub-input')
+// const subButton = document.querySelector('.sub-button')
+// const subList = document.querySelector('.sub-list')
+//
+// const editButton = document.getElementById('modal-editSub')
+// const trashButton = document.getElementById('modal-deleteSub')
 
 const onCreateSub = function (event) {
   event.preventDefault()
@@ -23,30 +22,30 @@ const onCreateSub = function (event) {
   console.log('sub data is ', subData)
   $('#addNewModal').modal('hide')
 
-  // testing
-  let newSub = subData.subscription
-  store.subscription = newSub
-  const subDiv = document.createElement('div')
-  subDiv.classList.add('sub')
-  // create list
-  newSub = document.createElement('li')
-  newSub.innerHTML = subData.subscription.url
-  // save
-  newSub.classList.add('sub-item')
-  subDiv.appendChild(newSub)
-  // create buttons
-  // const editButton = document.createElement('button')
-  editButton.innerHTML = 'Edit'
-  //   // adding class for styling
-  editButton.classList.add('edit-btn')
-  subDiv.appendChild(editButton)
-  //   // Create trash button
-  // const trashButton = document.createElement('button')
-  trashButton.innerHTML = 'Delete'
-  trashButton.classList.add('trash-btn')
-  subDiv.appendChild(trashButton)
-  //   // attach sub
-  subList.appendChild(subDiv)
+  // // testing
+  // let newSub = subData.subscription
+  // store.subscription = newSub
+  // const subDiv = document.createElement('div')
+  // subDiv.classList.add('sub')
+  // // create list
+  // newSub = document.createElement('li')
+  // newSub.innerHTML = subData.subscription.url
+  // // save
+  // newSub.classList.add('sub-item')
+  // subDiv.appendChild(newSub)
+  // // create buttons
+  // // const editButton = document.createElement('button')
+  // editButton.innerHTML = 'Edit'
+  // //   // adding class for styling
+  // editButton.classList.add('edit-btn')
+  // subDiv.appendChild(editButton)
+  // //   // Create trash button
+  // // const trashButton = document.createElement('button')
+  // trashButton.innerHTML = 'Delete'
+  // trashButton.classList.add('trash-btn')
+  // subDiv.appendChild(trashButton)
+  // //   // attach sub
+  // subList.appendChild(subDiv)
 
   api.createSub(subData)
     .then(ui.createSubSuccess)
