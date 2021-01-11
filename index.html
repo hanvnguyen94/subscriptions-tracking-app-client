@@ -118,18 +118,26 @@
   <!-- authenticated -->
   <div class="authenticated">
     <p id="sub-message"></p>
-    <div class="navbar fixed-top navbar-light bg-light justify-content-end">
-      <a id="navBrand" class="navbar-brand" href="#">TRACKING APP</a>
-      <!-- search box aka get one sub -->
-      <form class="form-inline" id="get-sub">
-        <input class="sub-input form-control mr-sm-2" type="search" name=subscription[id] placeholder="Search By ID" aria-label="Search" required>
+    <nav class="navbar fixed-top navbar-light bg-light justify-content-end">
+      <div class="container-fluid">
+        <div class="nav navbar">
+          <a id="navBrand" class="navbar-brand" href="#">TRACKING APP</a>
+          <!-- search box aka get one sub -->
+          <form class="form-inline" id="get-sub">
+            <input class="sub-input form-control mr-sm-2" type="search" name=subscription[id] placeholder="Search By ID" aria-label="Search" required>
 
-        <button type="submit">Search</button>
+            <button type="submit">Search</button>
 
-      </form>
-      <button id="modal-changePw" type="button" class="change-pw" data-toggle="modal" data-target="#changePwModal" data-whatever="">Change Password</button>
-      <button id="sign-out" type="submit">Sign Out</button>
-    </div>
+          </form>
+        </div>
+        <div class="nav navbar">
+          <button id="modal-changePw" type="button" class="change-pw" data-toggle="modal" data-target="#changePwModal" data-whatever="">Change Password</button>
+          <button id="sign-out" type="submit">Sign Out</button>
+        </div>
+      </div>
+    </nav>
+
+
     <div class="modal fade" id="changePwModal" tabindex="-1" role="dialog" aria-labelledby="changePwModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
