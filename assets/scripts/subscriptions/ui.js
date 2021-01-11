@@ -7,8 +7,8 @@ const subInput = document.querySelector('.sub-input')
 const subButton = document.querySelector('.sub-button')
 const subList = document.querySelector('.sub-list')
 
-const editButton = document.getElementById('modal-editSub')
-const trashButton = document.getElementById('modal-deleteSub')
+// const editButton = document.getElementById('modal-editSub')
+// const trashButton = document.getElementById('modal-deleteSub')
 
 const createSubSuccess = function (response) {
   $('.unauthenticated').hide()
@@ -20,38 +20,38 @@ const createSubSuccess = function (response) {
   // $('#sub-display').hide()
   $('.sub-container').show()
   //  'store' the subscription
-  let newSub = response.subscription
-  store.subscription = newSub
-  console.log('new sub data ', newSub)
-  // trying new thing to display
-  const subsList = []
-  subsList.push(newSub)
-  subsList.forEach(singleSub => {
-    const subDiv = document.createElement('div')
-    subDiv.classList.add('sub')
-    // create list
-    newSub = document.createElement('li')
-    newSub.innerHTML = store.subscription.url
-    // save
-    newSub.classList.add('sub-item')
-    subDiv.appendChild(newSub)
-    // subList.appendChild(newSub)
-
-    // create buttons
-    // const editButton = document.createElement('button')
-    // editButton.innerHTML = (editButton)
-
-    // adding class for styling
-    editButton.classList.add('edit-btn')
-    subDiv.appendChild(editButton)
-    // Create trash button
-    // const trashButton = document.createElement('button')
-    // trashButton.innerHTML = 'Delete'
-    trashButton.classList.add('trash-btn')
-    subDiv.appendChild(trashButton)
-    // attach sub
-    subList.appendChild(subDiv)
-  })
+  // let newSub = response.subscription
+  // store.subscription = newSub
+  // console.log('new sub data ', newSub)
+  // // trying new thing to display
+  // const subsList = []
+  // subsList.push(newSub)
+  // subsList.forEach(singleSub => {
+  //   const subDiv = document.createElement('div')
+  //   subDiv.classList.add('sub')
+  //   // create list
+  //   newSub = document.createElement('li')
+  //   newSub.innerHTML = store.subscription.url
+  //   // save
+  //   newSub.classList.add('sub-item')
+  //   subDiv.appendChild(newSub)
+  //   // subList.appendChild(newSub)
+  //
+  //   // create buttons
+  //   // const editButton = document.createElement('button')
+  //   // editButton.innerHTML = (editButton)
+  //
+  //   // adding class for styling
+  //   editButton.classList.add('edit-btn')
+  //   subDiv.appendChild(editButton)
+  //   // Create trash button
+  //   // const trashButton = document.createElement('button')
+  //   // trashButton.innerHTML = 'Delete'
+  //   trashButton.classList.add('trash-btn')
+  //   subDiv.appendChild(trashButton)
+  //   // attach sub
+  //   subList.appendChild(subDiv)
+  // })
   // reset all forms
   $('form').trigger('reset')
 }
@@ -87,10 +87,6 @@ const showSubsSuccess = function (response) {
   // $('.sub-list').hide()
 
   $('form').trigger('reset')
-}
-
-const tempDelete = function () {
-  console.log('hey there')
 }
 
 const showSubsFailure = function (error) {
@@ -130,12 +126,13 @@ const getSubFailure = function (error) {
   $('form').trigger('reset')
 }
 
-const deleteSubSuccess = function () {
+const deleteSubSuccess = function (event) {
   const subHTML = (`
     <div>
       <h4>Successfully Removed The Sub</h4>
     </div>`)
   $('#message').html(subHTML)
+
   $('form').trigger('reset')
 }
 
@@ -154,6 +151,5 @@ module.exports = {
   getSubSuccess,
   getSubFailure,
   deleteSubSuccess,
-  deleteSubFailure,
-  tempDelete
+  deleteSubFailure
 }
