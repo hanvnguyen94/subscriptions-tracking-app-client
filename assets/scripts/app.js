@@ -28,4 +28,5 @@ $(() => {
   $('#update-sub').on('submit', subEvents.onUpdateSub)
   $('#get-sub').on('submit', subEvents.onGetSub)
   $('#delete-sub').on('submit', subEvents.onDeleteSub)
+  //
 })

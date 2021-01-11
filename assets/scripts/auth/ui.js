@@ -28,7 +28,7 @@ const signInSuccess = function (response) {
   $('#message').text(`Welcome Back, ${store.user.email}!`)
   $('.authenticated').show()
   $('.unauthenticated').hide()
-
+  $('.img-head').hide()
   // show the authenticated options
   $('#change-password').show()
   $('#sign-out').show()
@@ -49,6 +49,7 @@ const signInFailure = function (error) {
 
 const changePasswordSuccess = function () {
   $('#message').text('Updated New Password')
+  $('#sub-display').hide()
   $('form').trigger('reset')
 }
 
@@ -60,6 +61,7 @@ const changePasswordFailure = function (error) {
 const signOutSuccess = function () {
   $('.authenticated').hide()
   $('.unauthenticated').show()
+  $('.img-head').show()
   // VERY IMPORTANT => unstore the user information
   store.user = null
   $('#message').text('Successfully Sign Out')
