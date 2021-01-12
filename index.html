@@ -11,6 +11,9 @@
   <!-- Do not add `script` tags-->
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+  <!-- adding font awesome -->
+  <script src="https://kit.fontawesome.com/909349107f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -29,8 +32,7 @@
       <!-- sign up -->
       <div class="flex-container">
         <div class="signUp-div left-third flex-child">
-          <h4 class="welcome">New User?
-          </h4>
+          <h4 class="welcome"><i class="fas fa-user-plus"></i> New User?</h4>
           <button class="signUp-hover" type="button" data-toggle="modal" data-target="#signUpModal" data-whatever="">GET STARTED</button>
 
           <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
@@ -74,7 +76,7 @@
         <button id="modal-signUp" type="button" class="btn btn-primary" data-toggle="modal" data-target="#signUpModal" data-whatever="">Create Account</button>
       </div> -->
         <div class="signIn-div right-third flex-child">
-          <h4 class="welcome">Already Signed Up?
+          <h4 class="welcome"><i class="fas fa-user"></i> Already Signed Up?
           </h4>
           <button class="signIn-hover" type="button" data-toggle="modal" data-target="#signInModal" data-whatever="">SIGN IN</button>
 
@@ -121,7 +123,7 @@
     <nav class="navbar fixed-top navbar-light bg-light justify-content-end">
       <div class="container-fluid">
         <div class="nav navbar">
-          <a id="navBrand" class="navbar-brand" href="#">TRACKING APP</a>
+          <a id="navBrand" class="navbar-brand" href="#"><i class="fab fa-angellist"></i> TRACKING APP</a>
           <!-- search box aka get one sub -->
           <form class="form-inline" id="get-sub">
             <input class="sub-input form-control mr-sm-2" type="search" name=subscription[id] placeholder="Search By ID" aria-label="Search" required>
@@ -131,7 +133,7 @@
           </form>
         </div>
         <div class="nav navbar">
-          <p class="user-name"></p>
+          <i class="fas fa-user signedIn"></i> <p class="user-name"></p>
           <button id="modal-changePw" type="button" class="change-pw" data-toggle="modal" data-target="#changePwModal" data-whatever="">Change Password</button>
           <button id="sign-out" type="submit">Sign Out</button>
         </div>
@@ -170,10 +172,10 @@
 
     <!-- show index button -->
 
-    <button id="show-subs" type="submit">SHOW TOTAL SUBS</button>
+    <button id="show-subs" type="submit"><i class="fas fa-hand-point-right"></i> DISPLAY YOUR LIST</button>
 
     <!-- making add new modal -->
-    <button id="modal-addNew" type="button" data-toggle="modal" data-target="#addNewModal" data-whatever="">Add New</button>
+    <button id="modal-addNew" type="button" data-toggle="modal" data-target="#addNewModal" data-whatever=""><i class="fas fa-plus-square"></i> Add New</button>
     <div class="modal fade" id="addNewModal" tabindex="-1" role="dialog" aria-labelledby="addNewModal" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -209,7 +211,7 @@
 
     <!-- making update modal -->
 
-    <button id="modal-editSub" type="button" data-toggle="modal" data-target="#editSubModal" data-whatever="">Edit</button>
+    <button id="modal-editSub" type="button" data-toggle="modal" data-target="#editSubModal" data-whatever=""><i class="fas fa-edit"></i> Edit</button>
     <div class="modal fade" id="editSubModal" tabindex="-1" role="dialog" aria-labelledby="editSubModal" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -249,7 +251,7 @@
 
     <!-- making delete modal -->
 
-    <button id="modal-deleteSub" type="button" data-toggle="modal" data-target="#deleteSubModal" data-whatever="">Delete</button>
+    <button id="modal-deleteSub" type="button" data-toggle="modal" data-target="#deleteSubModal" data-whatever=""><i class="fas fa-trash-alt"></i> Delete</button>
     <div class="modal fade" id="deleteSubModal" tabindex="-1" role="dialog" aria-labelledby="deleteSubModal" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">

@@ -50,13 +50,13 @@ const signInFailure = function (error) {
 }
 
 const changePasswordSuccess = function () {
-  $('#message').text('Updated New Password')
+  $('#message').text('Success! We Got Your New Secret!')
   $('#sub-display').hide()
   $('form').trigger('reset')
 }
 
 const changePasswordFailure = function (error) {
-  $('#message').text('Failed to change password ' + error.responseJSON.message)
+  $('#message').text('You Sure It Was Right? ' + error.responseJSON.message)
   $('form').trigger('reset')
 }
 
