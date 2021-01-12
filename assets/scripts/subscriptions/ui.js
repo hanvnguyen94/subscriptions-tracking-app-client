@@ -76,7 +76,7 @@ const showSubsSuccess = function (response) {
   mySubs.forEach(singleSub => {
     const singleSubHTML = (`
       <div class="demo">
-        <p>Website Address: ${singleSub.url}<button class='delete-btn'>Delete</button></p>
+        <p>Website Address: ${singleSub.url}</p>
         <p>Start Date: ${singleSub.start}</p>
         <p>End Date: ${singleSub.end}</p>
         <p>ID: ${singleSub._id}</p>
@@ -86,11 +86,11 @@ const showSubsSuccess = function (response) {
   })
   $('#sub-display').html(allSubsHTML)
   // making delete button
-  $('.delete-btn').on('click', deleteButton, () => {
-    // deleteButton.innerHTML = deleteButton
-    $('delete-btn').attr('id', 'modal-deleteSub')
-    console.log('im here')
-  })
+  // $('.delete-btn').on('click', deleteButton, () => {
+  //   // deleteButton.innerHTML = deleteButton
+  //   $('delete-btn').attr('id', 'modal-deleteSub')
+  //   console.log('im here')
+  // })
 
   // $('.sub-list').hide()
 

@@ -7,7 +7,8 @@ $('.authenticated').hide()
 // the ajax function's .then
 // will pass this function a response object from the API
 const signUpSuccess = function (response) {
-  $('#message').text('Sign Up Successfully!')
+  $('#message').text('Congrats! Now You Can Sign In')
+  $('.img-head').attr('scr', 'https://images.unsplash.com/photo-1523634921619-37ce98c1877f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80')
   $('form').trigger('reset')
 }
 
@@ -25,7 +26,8 @@ const signUpFailure = function (error) {
 const signInSuccess = function (response) {
   // save user information to use later on
   store.user = response.user
-  $('#message').text(`Welcome Back, ${store.user.email}!`)
+  $('#message').html(`Welcome Back, <strong>${store.user.email}</strong>!`)
+  $('.user-name').text(`${store.user.email}`)
   $('.authenticated').show()
   $('.unauthenticated').hide()
   $('.img-head').hide()
