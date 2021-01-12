@@ -115,7 +115,7 @@ const updateSubFailure = function (error) {
 }
 
 const getSubSuccess = function (response) {
-  console.log(response)
+  // console.log(response)
   const sub = response.subscription
 
   // console.log('sub is ', sub)

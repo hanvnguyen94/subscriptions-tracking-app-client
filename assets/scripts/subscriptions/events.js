@@ -80,7 +80,7 @@ const onGetSub = function (event) {
 
   const form = event.target
   const subData = getFormFields(form)
-  console.log('you have a problem here? ', subData)
+  // console.log('you have a problem here? ', subData)
 
   api.getSub(subData)
     .then(ui.getSubSuccess)
