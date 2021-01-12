@@ -19,7 +19,7 @@ const onCreateSub = function (event) {
   const form = event.target
   const subData = getFormFields(form)
 
-  console.log('sub data is ', subData)
+  // console.log('sub data is ', subData)
   $('#addNewModal').modal('hide')
 
   // // testing

@@ -3,12 +3,12 @@
 const store = require('./../store')
 
 // select DOM
-const subInput = document.querySelector('.sub-input')
-const subButton = document.querySelector('.sub-button')
+// const subInput = document.querySelector('.sub-input')
+// const subButton = document.querySelector('.sub-button')
 const subList = document.querySelector('.sub-list')
 
 // const editButton = document.getElementById('modal-editSub')
-const deleteButton = document.getElementById('modal-deleteSub')
+// const deleteButton = document.getElementById('modal-deleteSub')
 
 const createSubSuccess = function (response) {
   $('.unauthenticated').hide()
@@ -22,7 +22,7 @@ const createSubSuccess = function (response) {
   //  'store' the subscription
   let newSub = response.subscription
   store.subscription = newSub
-  console.log('new sub data ', newSub)
+  // console.log('new sub data ', newSub)
   // trying new thing to display
   // const subsList = []
   // subsList.push(newSub)
@@ -38,17 +38,17 @@ const createSubSuccess = function (response) {
   subDiv.appendChild(newSub)
   // subDiv.classList.add('demo')
   // create buttons
-  const editButton = document.createElement('button')
-  editButton.innerHTML = 'Edit'
-
-  // adding class for styling
-  editButton.classList.add('edit-btn')
-  subDiv.appendChild(editButton)
-  // Create delete button
-  const deleteButton = document.createElement('button')
-  deleteButton.innerHTML = 'Delete'
-  deleteButton.classList.add('delete-btn')
-  subDiv.appendChild(deleteButton)
+  // const editButton = document.createElement('button')
+  // editButton.innerHTML = 'Edit'
+  //
+  // // adding class for styling
+  // editButton.classList.add('edit-btn')
+  // subDiv.appendChild(editButton)
+  // // Create delete button
+  // const deleteButton = document.createElement('button')
+  // deleteButton.innerHTML = 'Delete'
+  // deleteButton.classList.add('delete-btn')
+  // subDiv.appendChild(deleteButton)
   // attach sub
   subList.appendChild(subDiv)
   // })
