@@ -33,9 +33,11 @@
       <div class="flex-container">
         <div class="signUp-div left-third flex-child">
           <h4 class="welcome"><i class="fas fa-user-plus"></i> New User?</h4>
-          <button class="signUp-hover" type="button" data-toggle="modal" data-target="#signUpModal" data-whatever="">GET STARTED</button>
+          <button class="signUp-hover" type="button" data-toggle="modal" data-target="#signUpModal" data-whatever="">GET
+            STARTED</button>
 
-          <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
+          <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -48,15 +50,18 @@
                   <form id="sign-up">
                     <div class="form-group">
                       <label for="email-signUp" class="col-form-label">Your Email:</label>
-                      <input name="credentials[email]" type="text" class="form-control" id="email-signUp" placeholder="Enter email" required>
+                      <input name="credentials[email]" type="text" class="form-control" id="email-signUp"
+                        placeholder="Enter email" required>
                     </div>
                     <div class="form-group">
                       <label for="password-signUp" class="col-form-label">Your Password:</label>
-                      <input name="credentials[password]" type="password" class="form-control" id="password-signUp" placeholder="Enter Password" required>
+                      <input name="credentials[password]" type="password" class="form-control" id="password-signUp"
+                        placeholder="Enter Password" required>
                     </div>
                     <div class="form-group">
                       <label for="password_confirmation" class="col-form-label">Confirm Password:</label>
-                      <input name="credentials[password_confirmation]" type="password" class="form-control" id="password_confirmation" placeholder="Confirm Password" required>
+                      <input name="credentials[password_confirmation]" type="password" class="form-control"
+                        id="password_confirmation" placeholder="Confirm Password" required>
                     </div>
                     <div class="modal-footer">
                       <button type="button" data-dismiss="modal">Close</button>
@@ -70,17 +75,14 @@
         </div>
 
         <!-- sign in -->
-        <!-- <div class="navbar fixed-top navbar-light bg-light justify-content-end">
-        <a class="navbar-brand" href="https://hanvnguyen94.github.io/subscriptions-tracking-app-client/">TRACKING APP</a>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signInModal" data-whatever="">LOG IN</button>
-        <button id="modal-signUp" type="button" class="btn btn-primary" data-toggle="modal" data-target="#signUpModal" data-whatever="">Create Account</button>
-      </div> -->
         <div class="signIn-div right-third flex-child">
           <h4 class="welcome"><i class="fas fa-user"></i> Already Signed Up?
           </h4>
-          <button class="signIn-hover" type="button" data-toggle="modal" data-target="#signInModal" data-whatever="">SIGN IN</button>
+          <button class="signIn-hover" type="button" data-toggle="modal" data-target="#signInModal"
+            data-whatever="">SIGN IN</button>
 
-          <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -93,11 +95,13 @@
                   <form id="sign-in">
                     <div class="form-group">
                       <label for="email-signIn" class="col-form-label">Email:</label>
-                      <input placeholder="Enter Email" name="credentials[email]" type="text" class="form-control" id="email-signIn">
+                      <input placeholder="Enter Email" name="credentials[email]" type="text" class="form-control"
+                        id="email-signIn">
                     </div>
                     <div class="form-group">
                       <label for="password-signIn" class="col-form-label">Password:</label>
-                      <input placeholder="Enter Password" name="credentials[password]" type="password" class="form-control" id="password-signIn">
+                      <input placeholder="Enter Password" name="credentials[password]" type="password"
+                        class="form-control" id="password-signIn">
                     </div>
                     <div class="modal-footer">
                       <button type="button" data-dismiss="modal">Close</button>
@@ -115,7 +119,9 @@
 
   <p id="message"></p>
   <!-- adding picture -->
-  <img class="img-head" src="https://images.unsplash.com/photo-1523634921619-37ce98c1877f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80" alt="organize-image">
+  <img class="img-head"
+    src="https://images.unsplash.com/photo-1523634921619-37ce98c1877f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80"
+    alt="organize-image">
 
   <!-- authenticated -->
   <div class="authenticated">
@@ -123,25 +129,31 @@
     <nav class="navbar fixed-top navbar-light bg-light justify-content-end">
       <div class="container-fluid">
         <div class="nav navbar">
-          <a id="navBrand" class="navbar-brand" href="https://hanvnguyen94.github.io/subscriptions-tracking-app-client"><i class="fab fa-angellist"></i> TRACKING APP</a>
+          <a id="navBrand" class="navbar-brand"
+            href="https://hanvnguyen94.github.io/subscriptions-tracking-app-client"><i class="fab fa-angellist"></i>
+            TRACKING APP</a>
           <!-- search box aka get one sub -->
           <form class="form-inline" id="get-sub">
-            <input class="sub-input form-control mr-sm-2" type="search" name=subscription[id] placeholder="Search By ID" aria-label="Search" required>
+            <input class="sub-input form-control mr-sm-2" type="search" name=subscription[id] placeholder="Search By ID"
+              aria-label="Search" required>
 
             <button type="submit">Search</button>
 
           </form>
         </div>
         <div class="nav navbar">
-          <i class="fas fa-user signedIn"></i> <p class="user-name"></p>
-          <button id="modal-changePw" type="button" class="change-pw" data-toggle="modal" data-target="#changePwModal" data-whatever="">Change Password</button>
+          <i class="fas fa-user signedIn"></i>
+          <p class="user-name"></p>
+          <button id="modal-changePw" type="button" class="change-pw" data-toggle="modal" data-target="#changePwModal"
+            data-whatever="">Change Password</button>
           <button id="sign-out" type="submit">Sign Out</button>
         </div>
       </div>
     </nav>
 
 
-    <div class="modal fade" id="changePwModal" tabindex="-1" role="dialog" aria-labelledby="changePwModalLabel" aria-hidden="true">
+    <div class="modal fade" id="changePwModal" tabindex="-1" role="dialog" aria-labelledby="changePwModalLabel"
+      aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -175,8 +187,10 @@
     <button id="show-subs" type="submit"><i class="fas fa-hand-point-right"></i> DISPLAY YOUR LIST</button>
 
     <!-- making add new modal -->
-    <button id="modal-addNew" type="button" data-toggle="modal" data-target="#addNewModal" data-whatever=""><i class="fas fa-plus-square"></i> Add New</button>
-    <div class="modal fade" id="addNewModal" tabindex="-1" role="dialog" aria-labelledby="addNewModal" aria-hidden="true">
+    <button id="modal-addNew" type="button" data-toggle="modal" data-target="#addNewModal" data-whatever=""><i
+        class="fas fa-plus-square"></i> Add New</button>
+    <div class="modal fade" id="addNewModal" tabindex="-1" role="dialog" aria-labelledby="addNewModal"
+      aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -193,11 +207,13 @@
               </div>
               <div class="form-group">
                 <label for="add-new-start" class="col-form-label">Start Date:</label>
-                <input name="subscription[start]" type="text" class="form-control" id="add-new-start" onfocus="(this.type='date')" onblur="(this.type='text')" required>>
+                <input name="subscription[start]" type="text" class="form-control" id="add-new-start"
+                  onfocus="(this.type='date')" onblur="(this.type='text')" required>>
               </div>
               <div class="form-group">
                 <label for="add-new-end" class="col-form-label">End Date:</label>
-                <input name="subscription[end]" type="text" class="form-control" id="add-new-end" onfocus="(this.type='date')" onblur="(this.type='text')" required>>
+                <input name="subscription[end]" type="text" class="form-control" id="add-new-end"
+                  onfocus="(this.type='date')" onblur="(this.type='text')" required>>
               </div>
               <div class="modal-footer">
                 <button type="button" data-dismiss="modal">Close</button>
@@ -211,8 +227,10 @@
 
     <!-- making update modal -->
 
-    <button id="modal-editSub" type="button" data-toggle="modal" data-target="#editSubModal" data-whatever=""><i class="fas fa-edit"></i> Edit</button>
-    <div class="modal fade" id="editSubModal" tabindex="-1" role="dialog" aria-labelledby="editSubModal" aria-hidden="true">
+    <button id="modal-editSub" type="button" data-toggle="modal" data-target="#editSubModal" data-whatever=""><i
+        class="fas fa-edit"></i> Edit</button>
+    <div class="modal fade" id="editSubModal" tabindex="-1" role="dialog" aria-labelledby="editSubModal"
+      aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -233,11 +251,13 @@
               </div>
               <div class="form-group">
                 <label for="edit-sub-start" class="col-form-label">Start Date:</label>
-                <input name="subscription[start]" type="text" class="form-control" id="edit-sub-start" onfocus="(this.type='date')" onblur="(this.type='text')" required>>
+                <input name="subscription[start]" type="text" class="form-control" id="edit-sub-start"
+                  onfocus="(this.type='date')" onblur="(this.type='text')" required>>
               </div>
               <div class="form-group">
                 <label for="edit-sub-end" class="col-form-label">End Date:</label>
-                <input name="subscription[end]" type="text" class="form-control" id="edit-sub-end" onfocus="(this.type='date')" onblur="(this.type='text')" required>>
+                <input name="subscription[end]" type="text" class="form-control" id="edit-sub-end"
+                  onfocus="(this.type='date')" onblur="(this.type='text')" required>>
               </div>
               <div class="modal-footer">
                 <button type="button" data-dismiss="modal">Close</button>
@@ -251,8 +271,10 @@
 
     <!-- making delete modal -->
 
-    <button id="modal-deleteSub" type="button" data-toggle="modal" data-target="#deleteSubModal" data-whatever=""><i class="fas fa-trash-alt"></i> Delete</button>
-    <div class="modal fade" id="deleteSubModal" tabindex="-1" role="dialog" aria-labelledby="deleteSubModal" aria-hidden="true">
+    <button id="modal-deleteSub" type="button" data-toggle="modal" data-target="#deleteSubModal" data-whatever=""><i
+        class="fas fa-trash-alt"></i> Delete</button>
+    <div class="modal fade" id="deleteSubModal" tabindex="-1" role="dialog" aria-labelledby="deleteSubModal"
+      aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
